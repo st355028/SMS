@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y3x-Xt-P7z">
+                                <rect key="frame" x="224" y="129" width="153" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="DlV-PG-Spa"/>
+                                    <constraint firstAttribute="height" constant="30" id="wsl-if-6Eu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="輸入電話號碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bjy-JE-PDh">
+                                <rect key="frame" x="249" y="78" width="102" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="輸入認證碼" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCZ-qu-20t">
+                                <rect key="frame" x="258" y="289" width="85" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LtW-gn-bkv">
+                                <rect key="frame" x="252" y="340" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="Kac-Tz-dUw"/>
+                                    <constraint firstAttribute="height" constant="30" id="qxO-pj-npp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gjc-Qx-mWk">
+                                <rect key="frame" x="255" y="189" width="90" height="30"/>
+                                <state key="normal" title="送出電話號碼"/>
+                                <connections>
+                                    <action selector="sendPhoneNumberBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AlH-e8-nIU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8O-jY-Na3">
+                                <rect key="frame" x="263" y="400" width="75" height="30"/>
+                                <state key="normal" title="送出認證碼"/>
+                                <connections>
+                                    <action selector="sendSecretNumberBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="86e-GZ-MlA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="結果顯示" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRk-ME-J05">
+                                <rect key="frame" x="266" y="559" width="68" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="NRk-ME-J05" secondAttribute="bottom" constant="20" id="0uX-2O-Cha"/>
+                            <constraint firstItem="E8O-jY-Na3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Te-Xx-S2t"/>
+                            <constraint firstItem="LtW-gn-bkv" firstAttribute="top" secondItem="NCZ-qu-20t" secondAttribute="bottom" constant="30" id="ByS-SP-Pqg"/>
+                            <constraint firstItem="y3x-Xt-P7z" firstAttribute="top" secondItem="Bjy-JE-PDh" secondAttribute="bottom" constant="30" id="GeH-Yu-4Ad"/>
+                            <constraint firstItem="Gjc-Qx-mWk" firstAttribute="top" secondItem="y3x-Xt-P7z" secondAttribute="bottom" constant="30" id="QDY-MG-uH7"/>
+                            <constraint firstItem="NRk-ME-J05" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eUT-oW-n1O"/>
+                            <constraint firstItem="E8O-jY-Na3" firstAttribute="top" secondItem="LtW-gn-bkv" secondAttribute="bottom" constant="30" id="i2S-jz-lvf"/>
+                            <constraint firstItem="Gjc-Qx-mWk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jaH-0I-0RU"/>
+                            <constraint firstItem="NCZ-qu-20t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="leL-Df-PLj"/>
+                            <constraint firstItem="y3x-Xt-P7z" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="luq-Ii-1ti"/>
+                            <constraint firstItem="NCZ-qu-20t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rGm-Mz-8TO"/>
+                            <constraint firstItem="Bjy-JE-PDh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="seZ-4R-0bn"/>
+                            <constraint firstItem="LtW-gn-bkv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tAB-L7-dOm"/>
+                            <constraint firstItem="NCZ-qu-20t" firstAttribute="top" secondItem="Gjc-Qx-mWk" secondAttribute="bottom" constant="70" id="yLd-HY-weQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputPhoneNumber" destination="y3x-Xt-P7z" id="LcH-Pz-jao"/>
+                        <outlet property="inputSecretNumber" destination="LtW-gn-bkv" id="kpM-qf-9ip"/>
+                        <outlet property="result" destination="NRk-ME-J05" id="d8z-hd-FZC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="226" y="339"/>
+        </scene>
+    </scenes>
+</document>
