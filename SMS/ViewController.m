@@ -10,7 +10,7 @@
 #import <SMS_SDK/SMSSDK.h>
 #import <MOBFoundation/MOBFoundation.h>
 
-@interface ViewController ()
+@interface ViewController ()<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *inputPhoneNumber;
 @property (weak, nonatomic) IBOutlet UITextField *inputSecretNumber;
 @property (weak, nonatomic) IBOutlet UILabel *result;
@@ -22,8 +22,28 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Set textField's delegate
+    self.inputPhoneNumber.delegate = self;
+    self.inputSecretNumber.delegate = self;
+    
+    //Set keyboard's type  only number 
+    self.inputPhoneNumber.keyboardType = UIKeyboardTypeNumberPad;
+    self.inputSecretNumber.keyboardType = UIKeyboardTypeNumberPad;
 }
+
+//碰觸鍵盤以外的地方收起鍵盤
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    
+    [self.view endEditing:true];
+    
+}
+
+/*按下鍵盤的return時收起鍵盤
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder];
+    return true;
+}*/
+
 
 #pragma mark -- 送出電話號碼到簡訊服務平台以便獲得驗證碼
 - (IBAction)sendPhoneNumberBtn:(UIButton *)sender {
@@ -33,12 +53,11 @@
         if (!error) {
             
             self.result.text = @"傳送手機號碼成功";
-            self.inputPhoneNumber.text = @"";
             
         } else {
             
             self.result.text = @"傳送手機號碼失敗";
-            self.inputPhoneNumber.text = @"";
+            
 
         }
     }];
